@@ -21,8 +21,7 @@ class RepositorySearchList extends Component {
 
     }
     getPageData = (searchQuery, pageNum) => {
-        console.log("Q", searchQuery, "p", pageNum)
-        const url = `https://api.github.com/search/repositories?q=language:${searchQuery}&per_page=20&page=${pageNum}`
+        const url = `https://api.github.com/search/repositories?q=language:${searchQuery}&per_page=20&page=${pageNum}&sort=forks&order=desc`
         fetch(url)
             .then(res => res.json())
             .then(res => {
@@ -31,7 +30,6 @@ class RepositorySearchList extends Component {
                     pageNo: pageNum
                     ,
                 })
-                console.log("res", res)
             });
     }
     componentDidMount() {

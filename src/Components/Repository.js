@@ -11,8 +11,8 @@ function Repository(props) {
                 <div className="col-md-6 ml-5">
                     <ul className="list-inline">
                         <li ><strong className="mr-3">Repository Name -</strong>{props.repoVal.name}</li>
-                        <li ><strong className="mr-3">Owner -</strong>{props.repoVal.forks_count}</li>
-                        <li ><strong className="mr-3">Fork count -</strong>{props.repoVal.owner.login}</li>
+                        <li ><strong className="mr-3">Owner -</strong>{props.repoVal.owner.login}</li>
+                        <li ><strong className="mr-3">Fork count -</strong>{props.repoVal.forks}</li>
                         <li ><strong className="mr-3">Stars count -</strong>{props.repoVal.stargazers_count}</li>
                     </ul>
                 </div>
