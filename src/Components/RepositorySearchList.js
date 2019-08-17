@@ -10,7 +10,6 @@ class RepositorySearchList extends Component {
         pageNo: 1,
     }
     onChange = (e) => {
-        console.log("change", e.target.value)
         this.setState({
             searchQuery: e.target.value
         })
@@ -48,8 +47,8 @@ class RepositorySearchList extends Component {
                         <span><button className="btn btn-link ml-3 mr-3">Page {this.state.pageNo}</button></span>
                         <span><button className="btn btn-success" onClick={() => this.getPageData(this.state.searchQuery, this.state.pageNo + 1)}>Next Page</button></span></div>
                 </div >
-                : <div className="spinner-border" role="status">
-                    <span className="sr-only d-flex justify-content-center ">Loading...</span>
+                : <div className="container d-flex justify-content-center">
+                    <span className="row "><h1>No Result Found !!</h1></span>
                 </div>
         )
     }
